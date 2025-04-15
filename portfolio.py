@@ -112,6 +112,13 @@ with col2:
         <li><strong>Advanced English Speaker</strong></li>
         <li><strong>Public Speaker</strong></li>
     </ul>
+    <strong>Hobbies:</strong>
+                    <ul>
+        <li><strong>Body Building</strong></li>
+        <li><strong>Reading Books</strong></li>
+
+    </ul>
+                
     </div>
     """, unsafe_allow_html=True)
 
@@ -204,6 +211,7 @@ st.markdown("""
     <a href="https://github.com/ahmaad99" target="_blank">GitHub</a>
     <a href="https://twitter.com/ahmaadxhandle" target="_blank">X (Twitter)</a>
     <a href="https://www.facebook.com/ahmad.anim.2024" target="_blank">Facebook</a>
+    <a href="https://wa.link/1m9cod" target="_blank">Whatsapp</a>
 </div>
 """, unsafe_allow_html=True)
 # Button for taking the full-page screenshot
