@@ -3,22 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
-def capture_fullpage_screenshot():
-    options = Options()
-    options.add_argument('--headless')
-    options.add_argument('--disable-gpu')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
 
-    service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=options)
-
-    # Your screenshot logic here...
-    # Example:
-    driver.get("https://example.com")
-    driver.save_screenshot("screenshot.png")
-    driver.quit()
-    return "screenshot.png"
 
 # CSS for hover magnification effect on segments and social links
 st.markdown("""
@@ -184,11 +169,4 @@ st.markdown("""
     <a href="https://www.facebook.com/ahmad.anim.2024" target="_blank">Facebook</a>
 </div>
 """, unsafe_allow_html=True)
-# Button for taking the full-page screenshot
-if st.button("Capture Full Page Screenshot"):
-    screenshot_path = capture_fullpage_screenshot()
 
-    # Provide the user with a downloadable link to the screenshot
-    with open(screenshot_path, "rb") as file:
-        st.download_button("Download Full Page Screenshot", data=file,
-                           file_name="portfolio_fullpage_screenshot.png", mime="image/png")
