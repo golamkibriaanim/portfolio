@@ -1,8 +1,45 @@
+import streamlit as st
+from PIL import Image
+import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
 
+# Page Configuration
+st.set_page_config(page_title="Ahmad Anim | Portfolio", layout="wide")
+
+# Load profile picture
+profile_pic = Image.open("profile.jpg")
+
+
+def capture_fullpage_screenshot():
+    options = webdriver.ChromeOptions()
+    options.add_argument("--headless")  # Run in headless mode (no UI)
+
+    # Initialize the WebDriver
+    driver = webdriver.Chrome(service=Service(
+        ChromeDriverManager().install()), options=options)
+
+    # URL of the Streamlit app (update it with your local or deployed URL)
+    url = "http://localhost:8501"  # Default Streamlit address when running locally
+
+    driver.get(url)
+
+    # Wait for the page to load
+    time.sleep(3)  # Adjust the wait time if needed
+
+    # Set the window size to a large value to capture the entire page
+    driver.set_window_size(1920, 3000)  # Adjust the height if necessary
+
+    # Capture the screenshot
+    screenshot_path = "portfolio_fullpage_screenshot.png"
+    driver.save_screenshot(screenshot_path)
+
+    # Close the WebDriver
+    driver.quit()
+
+    return screenshot_path
 
 
 # CSS for hover magnification effect on segments and social links
@@ -169,4 +206,11 @@ st.markdown("""
     <a href="https://www.facebook.com/ahmad.anim.2024" target="_blank">Facebook</a>
 </div>
 """, unsafe_allow_html=True)
+# Button for taking the full-page screenshot
+if st.button("Capture Full Page Screenshot"):
+    screenshot_path = capture_fullpage_screenshot()
 
+    # Provide the user with a downloadable link to the screenshot
+    with open(screenshot_path, "rb") as file:
+        st.download_button("Download Full Page Screenshot", data=file,
+                           file_name="portfolio_fullpage_screenshot.png", mime="image/png")
