@@ -145,7 +145,6 @@ with col2:
        <li><strong>Elder Brother:</strong> Anik Rahman(lives in Barcelona, Spain)</li>
        <li><strong>Elder Sister:</strong> Afasana Marium Mitu (lives in Germany)</li>
        <li><strong>Brotther-in-law</strong> Raju Ahmed(Senior IT/ Business Consultant, Newyorker.dz, Germany)</li>
-       
     </ul>
     </div>
     """, unsafe_allow_html=True)
