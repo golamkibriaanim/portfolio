@@ -142,9 +142,9 @@ with col2:
         <li><strong>Father:</strong> Alauddin Ahmed (Businessman)</li>
         <li><strong>Mother:</strong> Maksuda Begam (Housewife)</li>
        <li><strong>2 brothers, 1 sister</strong> (I'm the youngest)</li>
-       <li><strong>Elder Brother:</strong> Anik Rahman(lives in Barcelona, Spain)</li>
+       <li><strong>Elder Brother:</strong> Anik Rahman (lives in Barcelona, Spain)</li>
        <li><strong>Elder Sister:</strong> Afasana Marium Mitu (lives in Germany)</li>
-       <li><strong>Brother-in-law:</strong> Raju Ahmed(Senior Business Consultant,  Newyorker.dz,  Germany)</li>
+       <li><strong>Brother-in-law:</strong> Raju Ahmed (Senior Business Consultant,  Newyorker.dz,  Germany)</li>
     </ul>
     </div>
     """, unsafe_allow_html=True)
