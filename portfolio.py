@@ -151,7 +151,7 @@ st.markdown("""
         margin: 20px 0;
     }
     .connect-with-me a {
-        color: #fff;
+        color: red;
         text-decoration: none;
         margin: 0 15px;
         font-size: 18px;
