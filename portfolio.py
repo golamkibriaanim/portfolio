@@ -22,7 +22,7 @@ def capture_fullpage_screenshot():
         ChromeDriverManager().install()), options=options)
 
     # URL of the Streamlit app (update it with your local or deployed URL)
-    url = "http://localhost:8501"  # Default Streamlit address when running locally
+    url = "https://ahmad-cv.streamlit.app/"  # Default Streamlit address when running locally
 
     driver.get(url)
 
