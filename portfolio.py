@@ -180,7 +180,7 @@ st.markdown("""
 <div class="connect-with-me">
     <a href="https://instagram.com/animmetrics" target="_blank">Instagram</a>
     <a href="https://linkedin.com/in/ahmadmarkelyst" target="_blank">LinkedIn</a>
-    <a href="https://threads.net/@animmetrics" target="_blank">Threads</a>
+    <a href="https://threads.net/@vibrantlifee_" target="_blank">Threads</a>
     <a href="https://youtube.com/@ahmaadanim" target="_blank">YouTube</a>
     <a href="https://github.com/ahmaad99" target="_blank">GitHub</a>
     <a href="https://twitter.com/ahmaadxhandle" target="_blank">X (Twitter)</a>
