@@ -178,7 +178,7 @@ st.markdown("<h3 style='text-align:center;'>Connect with Me</h3>",
             unsafe_allow_html=True)
 st.markdown("""
 <div class="connect-with-me">
-    <a href="https://instagram.com/animmetrics" target="_blank">Instagram</a>
+    <a href="https://instagram.com/vibrantlifee_" target="_blank">Instagram</a>
     <a href="https://linkedin.com/in/ahmadmarkelyst" target="_blank">LinkedIn</a>
     <a href="https://threads.net/@vibrantlifee_" target="_blank">Threads</a>
     <a href="https://youtube.com/@ahmaadanim" target="_blank">YouTube</a>
