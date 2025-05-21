@@ -5,12 +5,34 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
+from streamlit_autorefresh import st_autorefresh
 
 # Page Configuration
 st.set_page_config(page_title="Ahmad Anim | Portfolio", layout="wide")
 
 # Load profile picture
-profile_pic = Image.open("profile.jpg")
+image_filenames = [
+    "img7.jpg", "img6.jpg", "img05.jpg", "img04.jpg",
+    "img03.jpg", "img02.jpg"
+]
+
+# Titles for images 1 to 4 (assuming these correspond to img1 to img4)
+image_titles = {
+    "img6.jpg": "The Convocation Day ",
+    "img7.jpg": "I am in full formal dress",
+    "img05.jpg": "Casual but Not Boring",
+    "img04.jpg": "A little glimpse of my place: Lounge",
+    "img03.jpg": "A little glimpse of my place: Family Drawing Room",
+    "img02.jpg": "A little glimpse of my place: Dining Space"
+}
+
+# Autorefresh every 2 seconds (2000 milliseconds)
+count = st.session_state.get('count', 0)
+refresh = st_autorefresh(interval=3000, limit=None, key="refresh")
+
+# Update count every rerun
+count = (count + 1) % len(image_filenames)
+st.session_state['count'] = count
 
 
 # CSS for hover magnification effect on segments and social links
@@ -40,7 +62,7 @@ st.markdown("""
     }
 
     .connect-with-me a {
-        color: #fff;
+        color: #EA8282;
         text-decoration: none;
         margin-right: 15px;
         font-size: 18px;
@@ -59,14 +81,28 @@ st.markdown("""
 col1, col2 = st.columns([1, 3])
 
 with col1:
-    st.image(profile_pic, use_container_width=False, width=400)
-    st.markdown(f"<h1 style='text-align:center;'>Ahmad Anim</h1>",
-                unsafe_allow_html=True)
-    st.markdown(f"<h4 style='text-align:center; color:gray'>CEO, Founder | Markelyst</h4>",
-                unsafe_allow_html=True)
-    st.markdown(f"<p style='text-align:center; color:#666;'>📧 ahmad@markelyst.com</p>",
-                unsafe_allow_html=True)
+    current_image = image_filenames[count]
+    image = Image.open(current_image)
+    st.image(image, use_container_width=True)
 
+    # Show title for images 1 to 4 only
+    if current_image in image_titles:
+        st.markdown(
+            f"<h4 style='text-align:center; color:gray'>{image_titles[current_image]}</h4>",
+            unsafe_allow_html=True,
+        )
+
+    # Profile info
+    st.markdown("<h1 style='text-align:center;'>Ahmad Anim</h1>",
+                unsafe_allow_html=True)
+    st.markdown(
+        "<h4 style='text-align:center; color:gray'>CEO, Founder | Markelyst</h4>",
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        "<p style='text-align:center; color:#666;'>📧 ahmad@markelyst.com</p>",
+        unsafe_allow_html=True,
+    )
 with col2:
     # --- About Me Section ---
     st.markdown("""
@@ -74,7 +110,7 @@ with col2:
     <h3>About Me</h3>
     <ul>
         <li><strong>Date of Birth:</strong> 28 March 1999</li>
-        <li><strong>Height:</strong> 5 feet 6.5 inches (169 cm)</li>
+        <li><strong>Height:</strong> 5 feet 7 inches</li>
         <li><strong>Aqida:</strong> Salafi</li>
     </ul>
     <strong>Some of my key qualities:</strong>
@@ -113,9 +149,6 @@ with col2:
         <li><strong>Father:</strong> Alauddin Ahmed (Businessman)</li>
         <li><strong>Mother:</strong> Maksuda Begam (Housewife)</li>
        <li><strong>2 brothers, 1 sister</strong> (I'm the youngest)</li>
-       <li><strong>Elder Brother:</strong> Anik Rahman (lives in Barcelona, Spain)</li>
-       <li><strong>Elder Sister:</strong> Afsana Marium Mitu (lives in Germany)</li>
-       <li><strong>Brother-in-law:</strong> Raju Ahmed (Senior Business Consultant,  Newyorker.dz,  Germany)</li>
     </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -138,7 +171,7 @@ with col2:
     st.markdown("""
     <div class='hover-segment'>
     <h3>Whereabouts</h3>
-    <p><strong>Permanent Address:</strong> Shahi Moholla, Matuil,  Dhaka</p>
+    <p><strong>Permanent Address:</strong> Shahi Moholla, Fatullah, Narayanganj(Adjacent to Dhaka North City Corporation)</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -151,7 +184,7 @@ st.markdown("""
         margin: 20px 0;
     }
     .connect-with-me a {
-        color: red;
+        color: #fff;
         text-decoration: none;
         margin: 0 15px;
         font-size: 18px;
@@ -173,14 +206,15 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+
 # --- Connect with Me Section ---
 st.markdown("<h3 style='text-align:center;'>Connect with Me</h3>",
             unsafe_allow_html=True)
 st.markdown("""
 <div class="connect-with-me">
-    <a href="https://instagram.com/vibrantlifee_" target="_blank">Instagram</a>
+    <a href="https://instagram.com/animmetrics" target="_blank">Instagram</a>
     <a href="https://linkedin.com/in/ahmadmarkelyst" target="_blank">LinkedIn</a>
-    <a href="https://threads.net/@vibrantlifee_" target="_blank">Threads</a>
+    <a href="https://threads.net/@animmetrics" target="_blank">Threads</a>
     <a href="https://youtube.com/@ahmaadanim" target="_blank">YouTube</a>
     <a href="https://github.com/ahmaad99" target="_blank">GitHub</a>
     <a href="https://twitter.com/ahmaadxhandle" target="_blank">X (Twitter)</a>
@@ -188,3 +222,4 @@ st.markdown("""
     <a href="https://wa.link/1m9cod" target="_blank">Whatsapp</a>
 </div>
 """, unsafe_allow_html=True)
+# Button for taking the full-page screenshot
