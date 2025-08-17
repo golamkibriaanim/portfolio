@@ -12,19 +12,13 @@ st.set_page_config(page_title="Ahmad Anim | Portfolio", layout="wide")
 
 # Load profile picture
 image_filenames = [
-    "img7.jpg", "img6.jpg", "img05.jpg", "img04.jpg",
-    "img03.jpg", "img02.jpg"
+ "img6.jpg"
 ]
 
 # Titles for images 1 to 4 (assuming these correspond to img1 to img4)
 image_titles = {
-    "img6.jpg": "The Convocation Day ",
-    "img7.jpg": "I am in full formal dress",
-    "img05.jpg": "Casual but Not Boring",
-    "img04.jpg": "A little glimpse of my place: Lounge",
-    "img03.jpg": "A little glimpse of my place: Family Drawing Room",
-    "img02.jpg": "A little glimpse of my place: Dining Space"
-}
+    "img6.jpg": "The Convocation Day "}
+
 
 # Autorefresh every 2 seconds (2000 milliseconds)
 count = st.session_state.get('count', 0)
