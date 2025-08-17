@@ -56,7 +56,7 @@ st.markdown("""
     }
 
     .connect-with-me a {
-        color: #EA8282;
+        color: #A52A2A
         text-decoration: none;
         margin-right: 15px;
         font-size: 18px;
