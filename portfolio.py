@@ -165,7 +165,7 @@ with col2:
         <li><strong>Data Analysis & Insights for Smarter Decisions</strong></li>
     </ul>
     <p>
-        🌐 Visit us at: <a href="https://yourwebsite.com" target="_blank">yourwebsite.com</a>
+        Visit us at: <a href="https://markelyst.com" target="_blank">markelyst.com</a>
     </p>
 </div>
 
