@@ -149,16 +149,26 @@ with col2:
 
     # --- What I Do Section ---
     st.markdown("""
-    <div class='hover-segment'>
+<div class='hover-segment'>
     <h3>What I Do</h3>
+    <p>
+        I run <strong>Markelyst</strong>, an Artificial Intelligence-powered digital marketing agency 
+        helping businesses grow with innovative solutions. We’ve been serving clients successfully 
+        for the past <strong>7 months</strong>.
+    </p>
     <ul>
-        <li><strong>Full-stack Digital Marketing Solutions</strong></li>
+        <li><strong>AI-empowered Digital Marketing Solutions</strong></li>
         <li><strong>Branding, Identity & Strategic Positioning</strong></li>
-        <li><strong>SEO & Content Optimization</strong></li>
-        <li><strong>Social Media Automation</strong></li>
-        <li><strong>AI-powered Campaigns</strong></li>
+        <li><strong>SEO & Smart Content Optimization</strong></li>
+        <li><strong>Social Media Automation & Growth</strong></li>
+        <li><strong>AI-powered Ad Campaigns & Analytics</strong></li>
+        <li><strong>Data Analysis & Insights for Smarter Decisions</strong></li>
     </ul>
-    </div>
+    <p>
+        🌐 Visit us at: <a href="https://yourwebsite.com" target="_blank">yourwebsite.com</a>
+    </p>
+</div>
+
     """, unsafe_allow_html=True)
 
     # --- Whereabouts Section ---
