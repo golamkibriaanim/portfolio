@@ -156,6 +156,7 @@ with col2:
         helping businesses grow with innovative solutions. We’ve been serving clients successfully 
         for the past <strong>7 months</strong>.
     </p>
+    <p><strong>We provide:</strong></p>
     <ul>
         <li><strong>AI-empowered Digital Marketing Solutions</strong></li>
         <li><strong>Branding, Identity & Strategic Positioning</strong></li>
