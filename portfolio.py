@@ -145,7 +145,7 @@ with col2:
        <li><strong>2 brothers, 1 sister</strong> (I'm the youngest)</li>
         <li><strong>Brother:</strong> Lives in Barcelona, Spain</li>
         <li><strong>Sister:</strong> Lives in Germany</li>
-        <li><strong>Brother-in-law:</strong> IT head in New Yorker, Germany</li>
+        <li><strong>Brother-in-law:</strong> IT head at New Yorker, Germany</li>
     </ul>
     </div>
     """, unsafe_allow_html=True)
