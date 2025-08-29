@@ -179,7 +179,7 @@ with col2:
     st.markdown("""
     <div class='hover-segment'>
     <h3>Whereabouts</h3>
-    <p><strong>Permanent Address:</strong> Shahi Moholla, Fatullah, Narayanganj(Adjacent to Dhaka North City Corporation)</p>
+    <p><strong>Permanent Address:</strong> Shahi Moholla, Rayerbagh, Dhaka North City Corporation</p>
     </div>
     """, unsafe_allow_html=True)
 
