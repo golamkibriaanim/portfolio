@@ -78,12 +78,7 @@ with col1:
     image = Image.open(current_image)
     st.image(image, use_container_width=True)
 
-    # Show title for images 1 to 4 only
-    if current_image in image_titles:
-        st.markdown(
-            f"<h4 style='text-align:center; color:gray'>{image_titles[current_image]}</h4>",
-            unsafe_allow_html=True,
-        )
+
 
     # Profile info
     st.markdown("<h1 style='text-align:center;'>Ahmad Anim</h1>",
