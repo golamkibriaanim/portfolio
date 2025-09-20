@@ -53,12 +53,14 @@ st.markdown("""
     }
 
     /* Force all images same dimension */
+    /* Force all images same bigger dimension */
     .stImage img {
         object-fit: cover;
         width: 100%;
-        height: 400px;  /* Adjust as needed */
+        height: 600px;   /* Increased from 400px */
         border-radius: 15px;
     }
+
 
     /* Social links styling */
     .connect-with-me {
