@@ -12,12 +12,11 @@ st.set_page_config(page_title="Ahmad Anim | Portfolio", layout="wide")
 
 # Load profile picture
 image_filenames = [
- "img6.jpg"
+ "img6.jpg",
+ "IMG_1646.jpeg",
+ "IMG_1641.jpeg"
 ]
 
-# Titles for images 1 to 4 (assuming these correspond to img1 to img4)
-image_titles = {
-    "img6.jpg": "The Convocation Day "}
 
 
 # Autorefresh every 2 seconds (2000 milliseconds)
