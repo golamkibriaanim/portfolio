@@ -17,9 +17,7 @@ image_filenames = [
  "IMG_1641.jpeg"
 ]
 
-
-
-# Autorefresh every 2 seconds (2000 milliseconds)
+# Autorefresh every 3 seconds
 count = st.session_state.get('count', 0)
 refresh = st_autorefresh(interval=3000, limit=None, key="refresh")
 
@@ -27,10 +25,10 @@ refresh = st_autorefresh(interval=3000, limit=None, key="refresh")
 count = (count + 1) % len(image_filenames)
 st.session_state['count'] = count
 
-
-# CSS for hover magnification effect on segments and social links
+# CSS Styles
 st.markdown("""
     <style>
+    /* Hover Segment Styling */
     .hover-segment {
         border-radius: 15px;
         padding: 25px;
@@ -54,18 +52,38 @@ st.markdown("""
         text-decoration: none;
     }
 
+    /* Force all images same dimension */
+    .stImage img {
+        object-fit: cover;
+        width: 100%;
+        height: 400px;  /* Adjust as needed */
+        border-radius: 15px;
+    }
+
+    /* Social links styling */
+    .connect-with-me {
+        text-align: center;
+        margin: 20px 0;
+    }
     .connect-with-me a {
-        color: #A52A2A
+        color: black !important;
         text-decoration: none;
-        margin-right: 15px;
+        margin: 0 15px;
         font-size: 18px;
+        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     }
     .connect-with-me a:hover {
-        color: #FF4B4B;
+        color: #FF4B4B !important;
+        transform: scale(1.2);  /* Magnification effect */
     }
     .social-icons i {
         font-size: 24px;
         margin-right: 10px;
+    }
+    .socials-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -78,8 +96,6 @@ with col1:
     image = Image.open(current_image)
     st.image(image, use_container_width=True)
 
-
-
     # Profile info
     st.markdown("<h1 style='text-align:center;'>Ahmad Anim</h1>",
                 unsafe_allow_html=True)
@@ -91,6 +107,7 @@ with col1:
         "<p style='text-align:center; color:#666;'>📧 ahmad@markelyst.com</p>",
         unsafe_allow_html=True,
     )
+
 with col2:
     # --- About Me Section ---
     st.markdown("""
@@ -108,12 +125,10 @@ with col2:
         <li><strong>Public Speaker</strong></li>
     </ul>
     <strong>Hobbies:</strong>
-                    <ul>
+    <ul>
         <li><strong>Body Building</strong></li>
         <li><strong>Reading Books</strong></li>
-
     </ul>
-                
     </div>
     """, unsafe_allow_html=True)
 
@@ -136,7 +151,7 @@ with col2:
     <ul>
         <li><strong>Father:</strong> Alauddin Ahmed (Businessman)</li>
         <li><strong>Mother:</strong> Maksuda Begam (Housewife)</li>
-       <li><strong>2 brothers, 1 sister</strong> (I'm the youngest)</li>
+        <li><strong>2 brothers, 1 sister</strong> (I'm the youngest)</li>
         <li><strong>Brother:</strong> Lives in Barcelona, Spain</li>
         <li><strong>Sister:</strong> Lives in Germany</li>
         <li><strong>Brother-in-law:</strong> IT head at New Yorker, Germany</li>
@@ -146,7 +161,7 @@ with col2:
 
     # --- What I Do Section ---
     st.markdown("""
-<div class='hover-segment'>
+    <div class='hover-segment'>
     <h3>What I Do</h3>
     <p>
         I run <strong>Markelyst</strong>, an Artificial Intelligence-powered digital marketing agency 
@@ -165,8 +180,7 @@ with col2:
     <p>
         Visit us at: <a href="https://markelyst.com" target="_blank">markelyst.com</a>
     </p>
-</div>
-
+    </div>
     """, unsafe_allow_html=True)
 
     # --- Whereabouts Section ---
@@ -176,38 +190,6 @@ with col2:
     <p><strong>Permanent Address:</strong> Shahi Moholla, Rayerbagh, Dhaka North City Corporation</p>
     </div>
     """, unsafe_allow_html=True)
-
-
-# --- Social Links (Horizontal, Text Only, Hover Animation) ---
-st.markdown("""
-    <style>
-    .connect-with-me {
-        text-align: center;
-        margin: 20px 0;
-    }
-    .connect-with-me a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 15px;
-        font-size: 18px;
-        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-    }
-    .connect-with-me a:hover {
-        color: #FF4B4B;
-        transform: scale(1.2);  /* Magnification effect */
-    }
-    .social-icons i {
-        font-size: 24px;
-        margin-right: 10px;
-    }
-    .socials-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
 
 # --- Connect with Me Section ---
 st.markdown("<h3 style='text-align:center;'>Connect with Me</h3>",
@@ -224,4 +206,3 @@ st.markdown("""
     <a href="https://wa.link/1m9cod" target="_blank">Whatsapp</a>
 </div>
 """, unsafe_allow_html=True)
-# Button for taking the full-page screenshot
