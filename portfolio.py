@@ -67,17 +67,19 @@ st.markdown("""
         text-align: center;
         margin: 20px 0;
     }
+    /* Social links styling */
     .connect-with-me a {
-        color: black !important;
+        color: #0077CC !important;   /* Blue - visible on both dark & light */
         text-decoration: none;
         margin: 0 15px;
         font-size: 18px;
         transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     }
     .connect-with-me a:hover {
-        color: #FF4B4B !important;
-        transform: scale(1.2);  /* Magnification effect */
+        color: #FF4B4B !important;   /* Red hover effect */
+        transform: scale(1.2);  
     }
+
     .social-icons i {
         font-size: 24px;
         margin-right: 10px;
