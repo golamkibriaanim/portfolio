@@ -13,7 +13,7 @@ st.set_page_config(page_title="Ahmad Anim | Portfolio", layout="wide")
 # Load profile picture
 image_filenames = [
  "img6.jpg",
- "IMG_1646.jpeg",
+ "IMG_1646.jpg",
  "IMG_1641.jpeg"
 ]
 
