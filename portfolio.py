@@ -120,7 +120,6 @@ with col2:
     <ul>
         <li><strong>Date of Birth:</strong> 28 March 1999</li>
         <li><strong>Height:</strong> 5 feet 7 inches</li>
-        <li><strong>Aqida:</strong> Salafi</li>
     </ul>
     <strong>Some of my key qualities:</strong>
     <ul>
@@ -191,7 +190,7 @@ with col2:
     st.markdown("""
     <div class='hover-segment'>
     <h3>Whereabouts</h3>
-    <p><strong>Permanent Address:</strong> Shahi Moholla, Rayerbagh, Dhaka North City Corporation</p>
+    <p><strong>Permanent Address:</strong> Shahi Moholla, Pagla , Fatullah (Adjacent to rayerbagh , Dhaka South City Corporation</p>
     </div>
     """, unsafe_allow_html=True)
 
