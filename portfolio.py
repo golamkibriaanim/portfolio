@@ -101,7 +101,7 @@ with col1:
     st.image(image, use_container_width=True)
 
     # Profile info
-    st.markdown("<h1 style='text-align:center;'>Ahmad Anim</h1>",
+    st.markdown("<h1 style='text-align:center;'>Golam Kibria Anim</h1>",
                 unsafe_allow_html=True)
     st.markdown(
         "<h4 style='text-align:center; color:gray'>CEO, Founder | Markelyst</h4>",
