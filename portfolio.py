@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 from streamlit_autorefresh import st_autorefresh
 
 # Page Configuration
-st.set_page_config(page_title="Ahmad Anim | Portfolio", layout="wide")
+st.set_page_config(page_title="Golam Kibria Anim | Portfolio", layout="wide")
 
 # Load profile picture
 image_filenames = [
